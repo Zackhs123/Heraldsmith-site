@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heraldsmith Utilities</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      color: #0078d7;
+    }
+    .card-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #0078d7;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Heraldsmith Utilities</h1>
+    <p>Games, tools, and automations — all in one place.</p>
+  </header>
+
+  <section class="card-grid">
+    <div class="card">
+      <h2>Blackjack Game</h2>
+      <p>Play a simple browser-based blackjack game.</p>
+      <a href="games/blackjack.html">Launch</a>
+    </div>
+    <div class="card">
+      <h2>Invoice Generator</h2>
+      <p>Generate and send an invoice with Power Automate.</p>
+      <a href="#" onclick="triggerInvoiceFlow()">Generate</a>
+    </div>
+    <div class="card">
+      <h2>Weather Tool</h2>
+      <p>Fetch local weather using an open API.</p>
+      <a href="tools/weather.html">Open</a>
+    </div>
+  </section>
+
+  <script>
+    // Example Power Automate HTTP trigger
+    function triggerInvoiceFlow() {
+      fetch('https://prod-xx.westus.logic.azure.com:443/workflows/your-flow-id-here?api-version=2016-10-01&sp=...&sv=...&sig=...')
+        .then(res => {
+          if (res.ok) alert("Invoice sent!");
+          else alert("Flow failed.");
+        })
+        .catch(() => alert("Could not contact the flow."));
+    }
+  </script>
+</body>
+</html>
