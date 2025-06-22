@@ -1,2 +1,2 @@
 # Heraldsmith-site
-Static site with games and a few Power Automate scripts that I've been working on
+Static site with games and a few scripts that I've been working on
