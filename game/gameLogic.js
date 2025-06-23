@@ -1,3 +1,4 @@
+//game logic
 console.log("gameLogic.js loaded");
 
 import { updateCreditsDisplay } from './init.js';
