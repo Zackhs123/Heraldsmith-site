@@ -44,7 +44,7 @@ jobs:
           app_location: "/"                 # Root of the repo where index.html lives
           config_file_location: "staticwebapp.config.json"
           api_location: ""                  # No backend API
-          output_location: ""               # Not building with a framework, so this is blank
+          output_location: "./"               # Not building with a framework, so this is blank
           skip_app_build: true              # Important: disables auto-build step
           github_id_token: ${{ steps.idtoken.outputs.result }}
 
