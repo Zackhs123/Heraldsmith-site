@@ -1,3 +1,5 @@
+//inititialize
+
 console.log("init.js loaded");
 
 import { initializeGame } from './gameLogic.js';
