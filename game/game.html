@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blackjack Game</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <!-- Settings Menu -->
+  <div id="menu-container">
+    <h1>Blackjack Settings</h1>
+    <label for="credits">Credits:</label>
+    <input type="number" id="credits" value="100" />
+    <label for="decks">Decks:</label>
+    <input type="number" id="decks" value="1" />
+    <label for="payout">Blackjack Payout:</label>
+    <select id="payout">
+      <option value="1.5">3:2</option>
+      <option value="1.2">6:5</option>
+      <option value="1">1:1</option>
+    </select>
+    <button id="start-game-button">Start Game</button>
+  </div>
+
+  <!-- Game Container -->
+  <div id="game-container" style="display: none;">
+    <div id="table-container">
+      <div id="table">
+        <!-- Dealer Section (Left) -->
+        <div id="dealer-area" class="player-area">
+          <div class="cards" id="dealer-hand"></div>
+          <div class="score" id="dealer-score">Dealer Score: 0</div>
+        </div>
+
+        <!-- Player Section (Right) -->
+        <div id="player-area" class="player-area">
+          <div class="cards" id="player-hand"></div>
+          <div class="score" id="player-score"></div>
+          <div class="cards" id="player-hand-2"></div>
+          <div class="score" id="player-score-2"></div>
+        </div>
+      </div>
+
+      <!-- Game Controls -->
+      <div id="credits-display">Credits: 100</div>
+      <label for="bet">Place Bet:</label>
+      <input type="number" id="bet" value="10" />
+
+      <div id="buttons">
+        <button id="deal-button">Deal</button>
+        <button id="hit-button" style="display: none;">Hit</button>
+        <button id="stand-button" style="display: none;">Stand</button>
+        <button id="double-button" style="display: none;">Double</button>
+        <button id="split-button" style="display: none;">Split</button>
+      </div>
+
+      <!-- Chart Area -->
+        <div id="charts-container">
+            <div class="chart-box">
+                <canvas id="credits-chart"></canvas>
+            </div>
+            <div class="chart-box">
+                <canvas id="win-percentage-chart"></canvas>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- JS Modules -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="js/init.js"></script>
+</body>
+</html>
