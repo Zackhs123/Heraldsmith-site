@@ -94,7 +94,7 @@ export function initializeGame(initialCredits, decks, payout) {
         // Show dealer cards
         dealerCards.forEach(card => {
             const img = document.createElement('img');
-            img.src = `images/${card.value}_of_${card.suit}.svg`;
+            img.src = `game/images/${card.value}_of_${card.suit}.svg`;
             img.alt = `${card.value} of ${card.suit}`;
             dealerHand.appendChild(img);
         });
